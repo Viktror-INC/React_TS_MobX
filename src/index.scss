@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.paper_wrap {
+  padding-bottom: 10px;
+}
+
+.currency {
+  display: flex;
+  padding: 10px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  .input_wrap {
+    position: relative;
+    margin: 0 20px;
+    width: 100%;
+    max-width: 270px;
+  }
+
+  .input_wrap {
+    span {
+      position: absolute;
+      z-index: 2;
+      top: 20%;
+    }
+  }
+
+  .count {
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    transition: all 0.2s linear;
+  }
+
+  .count_active {
+    opacity: 1;
+    top: -50%;
+    font-size: 13px;
+  }
+
+  input {
+    margin-right: 15px;
+    appearance: none;
+    outline: none;
+  }
+
+  .bgc_rotated {
+    max-width: 100px;
+    width: 100%;
+  }
+
+  input,
+  select {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid rgb(187, 187, 187);
+  }
+
+  input:hover,
+  select:hover {
+    border-bottom: 2px solid rgb(122, 122, 122);
+  }
+
+  select {
+    appearance: none;
+    max-width: 40%;
+    background-image: url("./images/open.png");
+    width: 100%;
+    background-position: 90% 50%;
+    background-size: 8px;
+    background-repeat: no-repeat;
+  }
+}
+
+.main-h2 {
+  text-align: center;
+  color: rgb(90, 90, 90);
+}
+
+.crypto_list {
+  padding: 20px 0;
+}
+
+.crypto_list li {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 3fr 3fr 3fr 3fr;
+  border-bottom: 1px solid #dfdfdf;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 20px;
+  align-items: center;
+
+  span {
+    width: 100%;
+    max-width: 150px;
+    overflow: auto;
+    margin-right: 10px;
+  }
+
+  img {
+    width: 100%;
+    max-width: 30px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.crypto_title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 860px) {
+  .column_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column_wrap .table_order:nth-child(1) {
+    width: 100%;
+    max-width: 100%;
+    order: 2;
+  }
+
+  .column_wrap .table_order:nth-child(2) {
+    width: 100%;
+    max-width: 100%;
+    order: 1;
+  }
+  .currency {
+    padding: 20px;
+
+    .input_wrap {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .bgc_rotated {
+      max-width: 200px;
+    }
+  }
+}
